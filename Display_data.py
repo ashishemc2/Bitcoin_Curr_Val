@@ -9,11 +9,11 @@ def main():
 
     time=Fetch_time.Fetch_time()
     coin = Koinex_GUI.Koinex_GUI().getCoin()
-    print coin
+    print (coin)
 
     Koinex={}
     while True:
-        curr_time = time.currentTime()
+        curr_time = time.currentTime
         url1=Koinex_Get_data.Getdata("https://koinex.in/api/ticker")
         url1.getdatafromurl()
         finaldict={curr_time:url1.convertdatafromurl().get('prices')}
