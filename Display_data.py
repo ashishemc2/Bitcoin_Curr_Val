@@ -19,7 +19,7 @@ def main():
         finaldict={curr_time:url1.convertdatafromurl().get('prices')}
         Koinex.update(finaldict)
         df = pd.read_json(json.dumps(Koinex))
-        graph=Plot_graph.Plot_graph(df.transpose()[coin])
+        graph=Plot_graph.Plot_graph(coin,df.transpose()[coin])
         graph.plot_graph()
 if __name__ == '__main__':
     main()
