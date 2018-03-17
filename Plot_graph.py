@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import time
+
 class Plot_graph:
     def __init__(self,coin_name, df,kind='line'):
         plt.figure()
@@ -11,6 +11,5 @@ class Plot_graph:
         self.df.plot(kind=self.kind, title="CryptoCurrency price", figsize=(15, 10))
         plt.savefig(self.coin_name)
         #plt.show(block=False)
-        time.sleep(60)
         plt.close('all')
         print("Done")
