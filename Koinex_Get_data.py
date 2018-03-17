@@ -9,7 +9,7 @@ class Getdata:
     def getdatafromurl(self):
         #session = sessions.Session()
         #session.proxies = {'https': '135.245.115.123:8000'}
-        self.browser = robobrowser.RoboBrowser(history=True,session=session)
+        self.browser = robobrowser.RoboBrowser(history=True)
         self.browser.open(self.url)
         #print(self.browser.parsed)
 
